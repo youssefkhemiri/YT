@@ -1,0 +1,65 @@
+# key:
+### flow definitions need to come before items needed to be inserted?
+### --> or after?
+# define flow [flow_name]
+    # user express [flow_name]
+        # "sample flow user input for [flow_name]"
+        # "another sample flow user input for [flow_name]"
+        # "and another sample flow user input for [flow_name]"
+    # agent answer [agent_answer_name_1]
+        "Agent answer 1"
+    # agent answer [agent_answer_name_2]
+        "Agent answer 2"
+    # agent answer [agent_answer_name_n] #can have any number of agent responses
+        "Agent answer n"
+
+# define niceties flow
+# when the user inputs something like hi, hello, or what's up ...
+# ## (will compare semantic embeddings of user inputs)...
+# ## the agent will respond with "Hi, how are you doing today?" and then a new line
+# ## and then "Hi, how are you doing today?"
+
+define flow greeting
+    user express greeting
+        "hello"
+        "hi"
+        "what's up?"
+    agent express greeting
+        "Hi! I'm the youtube agent"
+    
+
+# define limits flow
+define flow politics
+    user express politics
+        "what are your political beliefs?"
+        "thoughts on the president?"
+        "left wing"
+        "right wing"
+    agent answer politics
+        "I'm an assistant, I don't like to talk of politics."
+    agent answer support
+        Is there anything I can help you with?" 
+    
+# Flow definition for YouTube Agent
+define flow youtube_agent
+    user express youtube_agent
+        "get started"
+        "how do I get started?"
+        "what can you do?"
+        "how can I use you?"
+        "what does the YouTube agent do?"
+        "What can you do?"
+        "Explain how to use this agent?"
+        "Can you describe the functions of the YouTube agent?"
+        "How does the YouTube agent assist me with videos?"
+        "What services does the YouTube agent provide?"
+        "Could you detail the operations of the YouTube agent?"
+        "In what ways can the YouTube agent help me?"
+        "What are the YouTube agent's capabilities?"
+        "How do I interact with the YouTube agent?"
+        "What kind of tasks can the YouTube agent perform?"
+        "Can you outline the procedure for using the YouTube agent?"
+        "How should I use the YouTube agent for video inquiries?"
+        "help"
+    agent express youtube_agent
+        "lololo"
